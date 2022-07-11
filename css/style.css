@@ -1602,6 +1602,7 @@ body::after {
 
 .about__image-ibg_radius-left img {
   border-radius: 200px 0 0 0;
+  overflow: hidden;
 }
 
 .about__image-ibg_radius-left::after {
@@ -1616,7 +1617,8 @@ body::after {
 }
 
 .about__image-ibg_radius-right img {
-  border-radius: 0 0 200px 0;
+  border-radius: 0px 0px 200px 0px;
+  overflow: hidden;
 }
 
 .about__image-ibg_radius-right::after {
@@ -1630,16 +1632,16 @@ body::after {
   position: relative;
 }
 
-@supports (padding-top: clamp( 2.5rem , 0.1851851852rem  +  11.5740740741vw , 8.75rem )) {
+@supports (padding-top: clamp( 1.875rem , -0.6712962963rem  +  12.7314814815vw , 8.75rem )) {
   .works {
-    padding-top: clamp( 2.5rem , 0.1851851852rem  +  11.5740740741vw , 8.75rem );
+    padding-top: clamp( 1.875rem , -0.6712962963rem  +  12.7314814815vw , 8.75rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.5rem , 0.1851851852rem  +  11.5740740741vw , 8.75rem )) {
+@supports not (padding-top: clamp( 1.875rem , -0.6712962963rem  +  12.7314814815vw , 8.75rem )) {
   .works {
     padding-top: calc(
-			2.5rem + 6.25 * (100vw - 20rem) / 54
+			1.875rem + 6.875 * (100vw - 20rem) / 54
 		);
   }
 }
@@ -1738,13 +1740,13 @@ body::after {
 
 .spollers__item {
   background-color: #fff;
-  padding: 20px 50px 20px 25px;
   -webkit-box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
           box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
   border-radius: 10px;
 }
 
 .spollers__title {
+  padding: 20px 50px 20px 25px;
   color: #313131;
   font-weight: 700;
   font-size: 1.125rem;
@@ -1777,8 +1779,8 @@ body::after {
   width: 2px;
   height: 20px;
   position: absolute;
-  top: 0;
-  right: -20px;
+  top: 39px;
+  right: 30px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -1805,6 +1807,7 @@ body::after {
 }
 
 .spollers__body {
+  padding: 0 20px;
   padding: 1.875rem 0px 0px 0;
   line-height: 1.27;
 }
@@ -2583,8 +2586,12 @@ body::after {
     bottom: -25px;
   }
 
-  .spollers__item {
+  .spollers__title {
     padding: 37px 50px 37px 35px;
+  }
+
+  .spollers__body {
+    padding: 0 35px 59px 35px;
   }
 }
 
@@ -2926,9 +2933,8 @@ body::after {
   }
 
   .about__image-ibg img {
-    position: relative;
+    position: static;
     width: 100%;
-    height: 100%;
     display: block;
     max-height: 600px;
     -o-object-fit: contain;
@@ -3155,7 +3161,7 @@ body::after {
   }
 
   .form-header__input {
-    min-height: 48px;
+    min-height: 60px;
   }
 
   .works__button {
