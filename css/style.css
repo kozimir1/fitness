@@ -1779,7 +1779,7 @@ body::after {
   width: 2px;
   height: 20px;
   position: absolute;
-  top: 39px;
+  top: 20px;
   right: 30px;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1807,8 +1807,7 @@ body::after {
 }
 
 .spollers__body {
-  padding: 0 20px;
-  padding: 1.875rem 0px 0px 0;
+  padding: 0 20px 25px 20px;
   line-height: 1.27;
 }
 
@@ -2588,6 +2587,11 @@ body::after {
 
   .spollers__title {
     padding: 37px 50px 37px 35px;
+  }
+
+  .spollers__title::before,
+  .spollers__title::after {
+    top: 39px;
   }
 
   .spollers__body {
