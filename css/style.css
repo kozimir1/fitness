@@ -2936,6 +2936,10 @@ body::after {
   }
 
   .about__image-ibg {
+    display: inline-block;
+  }
+
+  .about__image-ibg {
     padding-bottom: 0;
     max-width: 390px;
   }
