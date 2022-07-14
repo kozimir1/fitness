@@ -1572,6 +1572,10 @@ body::after {
   }
 }
 
+.about__box {
+  text-align: center;
+}
+
 @supports (margin-bottom: clamp( 1.875rem , 0.7638888889rem  +  5.5555555556vw , 4.875rem )) {
   .about__box:not(:last-child) {
     margin-bottom: clamp( 1.875rem , 0.7638888889rem  +  5.5555555556vw , 4.875rem );
@@ -1586,7 +1590,11 @@ body::after {
   }
 }
 
-.about__image-ibg::after {
+.about__subbox {
+  position: relative;
+}
+
+.about__subbox::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1596,36 +1604,32 @@ body::after {
   border: 1px solid #313131;
 }
 
-.about__image-ibg_radius-left {
-  padding-bottom: 133.5968379447%;
-}
-
-.about__image-ibg_radius-left img {
-  border-radius: 200px 0 0 0;
-  overflow: hidden;
-}
-
-.about__image-ibg_radius-left::after {
+.about__subbox_radius-left::after {
   border-radius: 200px 0 0 0;
   -webkit-transform: translate(-25px, 24px);
       -ms-transform: translate(-25px, 24px);
           transform: translate(-25px, 24px);
 }
 
-.about__image-ibg_radius-right {
-  padding-bottom: 154.4368600683%;
-}
-
-.about__image-ibg_radius-right img {
-  border-radius: 0px 0px 200px 0px;
-  overflow: hidden;
-}
-
-.about__image-ibg_radius-right::after {
+.about__subbox_radius-right::after {
   border-radius: 0 0 200px 0;
   -webkit-transform: translate(25px, 24px);
       -ms-transform: translate(25px, 24px);
           transform: translate(25px, 24px);
+}
+
+.about__image-ibg {
+  overflow: hidden;
+}
+
+.about__image-ibg_radius-left {
+  border-radius: 200px 0 0 0;
+  padding-bottom: 133.5968379447%;
+}
+
+.about__image-ibg_radius-right {
+  border-radius: 0 0 200px 0;
+  padding-bottom: 154.4368600683%;
 }
 
 .works {
@@ -2743,13 +2747,13 @@ body::after {
 }
 
 @media (max-width: 76.25em) {
-  .about__image-ibg_radius-left::after {
+  .about__subbox_radius-left::after {
     -webkit-transform: translate(-15px, 11px);
         -ms-transform: translate(-15px, 11px);
             transform: translate(-15px, 11px);
   }
 
-  .about__image-ibg_radius-right::after {
+  .about__subbox_radius-right::after {
     -webkit-transform: translate(15px, 11px);
         -ms-transform: translate(15px, 11px);
             transform: translate(15px, 11px);
@@ -2927,13 +2931,16 @@ body::after {
     padding: 20px 0px 0px 0px;
   }
 
-  .about__box {
+  .about__subbox {
+    display: inline-block;
+  }
+
+  .about__subbox {
     text-align: center;
   }
 
   .about__image-ibg {
     padding-bottom: 0;
-    display: inline-block;
   }
 
   .about__image-ibg img {
