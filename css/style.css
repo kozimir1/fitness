@@ -2935,17 +2935,9 @@ body::after {
     display: inline-block;
   }
 
-  .about__subbox {
-    text-align: center;
-  }
-
-  .about__image-ibg {
-    display: inline-block;
-  }
-
   .about__image-ibg {
     padding-bottom: 0;
-    max-width: 400px;
+    max-width: 390px;
   }
 
   .about__image-ibg img {
