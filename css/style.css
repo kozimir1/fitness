@@ -2945,6 +2945,7 @@ body::after {
 
   .about__image-ibg {
     padding-bottom: 0;
+    max-width: 400px;
   }
 
   .about__image-ibg img {
